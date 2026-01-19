@@ -1,0 +1,201 @@
+/* =========================================================
+   Björn Mannefred AB – v0.2
+   Fokus: layout, rytm, subtil modell
+   ========================================================= */
+
+/* -------------------------
+   Fonts
+   ------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* -------------------------
+   Reset / Base
+   ------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   Global layout
+   ------------------------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+
+/* -------------------------
+   Header / Brand
+   ------------------------- */
+.site-header {
+  padding: 3rem 2rem 4rem;
+}
+
+.brand {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand-name {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-model {
+  margin-top: 0.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.brand-model span {
+  margin: 0 0.4rem;
+  opacity: 0.4;
+}
+
+/* -------------------------
+   Hero
+   ------------------------- */
+.hero {
+  max-width: 640px;
+  padding: 6rem 0 8rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+
+  
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  max-width: 35rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* -------------------------
+   Domains (Utveckling / Utbildning / Ledarskap)
+   ------------------------- */
+.domains {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: -3rem;
+  padding: 6rem 0;
+}
+
+.domain {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.domain::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.domain h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.domain p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Asymmetri – antyder modellen */
+.development {
+  margin-top: 0;
+}
+
+.education {
+  margin-top: 0;
+}
+
+.leadership {
+  margin-top: 0;
+}
+
+/* -------------------------
+   Contact
+   ------------------------- */
+.contact {
+  padding: 6rem 0 8rem;
+}
+
+.contact p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  max-width: 520px;
+}
+
+/* -------------------------
+   Footer
+   ------------------------- */
+footer {
+  padding: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Responsive (mobile)
+   ------------------------- */
+@media (max-width: 900px) {
+  .domains {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 0;
+  }
+
+  .development,
+  .education,
+  .leadership {
+    margin-top: 0;
+  }
+
+  .hero {
+    padding: 4rem 0 6rem;
+  }
+}
