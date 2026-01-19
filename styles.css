@@ -63,15 +63,19 @@ a:hover {
 
 .brand-name {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
+  font-size: clamp(0.85rem, 4vw, 1rem);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .brand-model {
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 3.5vw, 0.9rem);
+  letter-spacing: 0.04em;
   opacity: 0.7;
+  white-space: nowrap;
 }
 
 .brand-model span {
