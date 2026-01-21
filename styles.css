@@ -59,16 +59,24 @@ a:hover {
 .brand {
   max-width: 1100px;
   margin: 0 auto;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 
+
 .brand-name {
+
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(0.8rem, 3.8vw, 0.95rem);
   letter-spacing: 0.04em;
   line-height: 1.2;
   white-space: nowrap;
+
+  /* 🔑 ny rad */
+  padding-right: 0.08em;
 }
 
 .brand-model {
